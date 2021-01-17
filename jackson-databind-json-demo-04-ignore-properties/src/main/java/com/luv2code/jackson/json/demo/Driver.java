@@ -28,6 +28,7 @@ public class Driver {
 			System.out.println("Country = " + address.getCountry());
 			System.out.println("State = " + address.getState());
 			System.out.println("Street = " + address.getStreet());
+			System.out.println("Street = " + address.getZip());
 
 			// print out languages
 			int iterate = 0;

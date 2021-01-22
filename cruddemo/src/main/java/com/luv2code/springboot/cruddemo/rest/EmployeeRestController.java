@@ -20,12 +20,18 @@ import com.luv2code.springboot.cruddemo.service.EmployeeService;
 @RequestMapping("/api")
 public class EmployeeRestController {
 
-private EmployeeService employeeService;
-	
+
+//alternative constructor injection type	
+//private EmployeeService employeeService;
+//
+//@Autowired
+//public EmployeeRestController(EmployeeService theEmployeeService) {
+//	employeeService = theEmployeeService;
+//}
+
+
 	@Autowired
-	public EmployeeRestController(EmployeeService theEmployeeService) {
-		employeeService = theEmployeeService;
-	}
+	private EmployeeService employeeService;
 	
 	// expose "/employees" and return list of employees
 	@GetMapping("/employees")
